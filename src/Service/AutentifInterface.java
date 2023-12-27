@@ -92,6 +92,8 @@ public class AutentifInterface extends JFrame {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
             e.printStackTrace();
+
+
         }
     }
 
