@@ -20,6 +20,7 @@ public class NewAdmin extends JFrame {
     private JTextField ibanTextField;
     private JCheckBox superAdminCheckBox;
     private JButton adaugaButton;
+    private JButton inapoiButton;
 
     public NewAdmin() {
         initializeUI();
@@ -49,6 +50,10 @@ public class NewAdmin extends JFrame {
         ibanTextField = new JTextField();
         superAdminCheckBox = new JCheckBox("Super Admin");
         adaugaButton = new JButton("Adauga Administrator");
+        inapoiButton = new JButton("Înapoi");
+        //inapoiButton.setBackground(new Color(67, 134, 204));
+        //inapoiButton.setForeground(Color.WHITE);
+        //inapoiButton.setFont(new Font("Arial", Font.BOLD, 12));
 
         formPanel.add(new JLabel("Email:"));
         formPanel.add(emailTextField);
@@ -72,6 +77,8 @@ public class NewAdmin extends JFrame {
         formPanel.add(superAdminCheckBox);
         formPanel.add(new JLabel()); // Celula goală pentru a ocupa spațiu
         formPanel.add(adaugaButton);
+        formPanel.add(new JLabel()); // Celula goală pentru a ocupa spațiu
+        formPanel.add(inapoiButton);
 
         mainPanel.add(formPanel, BorderLayout.CENTER);
         add(mainPanel);
@@ -85,6 +92,14 @@ public class NewAdmin extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 adaugaAdministrator();
+            }
+        });
+
+        inapoiButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new AutentifInterface().setVisible(true);
             }
         });
     }
@@ -103,13 +118,17 @@ public class NewAdmin extends JFrame {
         boolean superAdmin = superAdminCheckBox.isSelected();
 
         // Apelați metoda din repository pentru adăugarea administratorului în baza de date
-        UtilizatorRepository.adaugareAdministrator(email, parola, cnp, nume, prenume, adresa, nrTel, nrContract, iban, superAdmin);
+        int rez = UtilizatorRepository.adaugareAdministrator(email, parola, cnp, nume, prenume, adresa, nrTel, nrContract, iban, superAdmin);
 
         // Afiseaza un mesaj de succes
-        JOptionPane.showMessageDialog(this, "Administrator adăugat cu succes!");
+        if(rez==-1)
+            JOptionPane.showMessageDialog(NewAdmin.this, "Administratorul exista deja!");
+        else
+            JOptionPane.showMessageDialog(NewAdmin.this, "Administrator adăugat cu succes!");
 
         // Închide fereastra curentă
         dispose();
+        new HomeAdmin(email).setVisible(true);
     }
 
     public static void main(String[] args) {

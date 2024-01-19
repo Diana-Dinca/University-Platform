@@ -5,16 +5,12 @@ public class InrolariCurs {
     private int idStudent;
     private int idProfesor;
     private int idCurs;
-    private int nota;
-    private String tipPredare;
 
-    public InrolariCurs(int id_inrolare, int id_student, int id_profesor, int id_curs, int nota, String tip_predare) {
+    public InrolariCurs(int id_inrolare, int id_student, int id_profesor, int id_curs) {
         this.idInrolare = id_inrolare;
         this.idStudent = id_student;
         this.idProfesor = id_profesor;
         this.idCurs = id_curs;
-        this.nota = nota;
-        this.tipPredare = tip_predare;
     }
 
     public InrolariCurs() {
@@ -50,21 +46,5 @@ public class InrolariCurs {
 
     public void setIdCurs(int idCurs) {
         this.idCurs = idCurs;
-    }
-
-    public int getNota() {
-        return nota;
-    }
-
-    public void setNota(int nota) {
-        this.nota = nota;
-    }
-
-    public String getTipPredare() {
-        return tipPredare;
-    }
-
-    public void setTipPredare(String tipPredare) {
-        this.tipPredare = tipPredare;
     }
 }

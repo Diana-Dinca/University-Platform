@@ -5,14 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HomeAdmin extends JFrame {
+public class HomeSuperAdmin extends JFrame {
     private JButton deautentificareButton;
     private JButton vizualizareDatePersonaleButton;
     private JButton cautareUtilizatoriButton;
     private JButton cautareCursButton;
-
-    public HomeAdmin(String email) {
-        setTitle("Home Admin");
+    public HomeSuperAdmin(String email) {
+        setTitle("Home Super Admin");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 250);
 
@@ -26,7 +25,7 @@ public class HomeAdmin extends JFrame {
     private void initializeUI() {
         deautentificareButton = createStyledButton("Deautentificare");
         vizualizareDatePersonaleButton = createStyledButton("Vizualizare Date");
-        cautareUtilizatoriButton = createStyledButton("Cautare Utilizator");
+        cautareUtilizatoriButton = createStyledButton("Cautare Utilizatori");
         cautareCursButton = createStyledButton("Cautare Curs");
 
         GroupLayout layout = new GroupLayout(getContentPane());
@@ -70,8 +69,7 @@ public class HomeAdmin extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new CautareUtilizator(email).setVisible(true);
-            }
+                new CautareUtilizator(email).setVisible(true);            }
         });
         cautareCursButton.addActionListener(new ActionListener() {
             @Override
@@ -89,10 +87,9 @@ public class HomeAdmin extends JFrame {
 
         return button;
     }
+
     public static void main(String[] args) {
-        new HomeAdmin("topavasile@yahoo.com");
+        new HomeSuperAdmin("friedjuliana@yahoo.com");
     }
-
-
 
 }

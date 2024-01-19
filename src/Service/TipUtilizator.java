@@ -17,19 +17,22 @@ public class TipUtilizator extends JFrame {
         JButton studentButton = new JButton("Student");
         JButton profesorButton = new JButton("Profesor");
         JButton administratorButton = new JButton("Administrator");
+        studentButton.setFont(new Font("Arial", Font.BOLD, 12)); // Setează fontul dorit
+        profesorButton.setFont(new Font("Arial", Font.BOLD, 12)); // Setează fontul dorit
+        administratorButton.setFont(new Font("Arial", Font.BOLD, 12)); // Setează fontul dorit
 
 
-        studentButton.setBackground(new Color(67, 134, 204));
-        studentButton.setForeground(Color.WHITE);
-        studentButton.setFont(new Font("Arial", Font.BOLD, 12));
+        //studentButton.setBackground(new Color(67, 134, 204));
+        //studentButton.setForeground(Color.WHITE);
+        //studentButton.setFont(new Font("Arial", Font.BOLD, 12));
 
-        profesorButton.setBackground(new Color(67, 134, 204));
-        profesorButton.setForeground(Color.WHITE);
-        profesorButton.setFont(new Font("Arial", Font.BOLD, 12));
+        //profesorButton.setBackground(new Color(67, 134, 204));
+        //profesorButton.setForeground(Color.WHITE);
+        //profesorButton.setFont(new Font("Arial", Font.BOLD, 12));
 
-        administratorButton.setBackground(new Color(67, 134, 204));
-        administratorButton.setForeground(Color.WHITE);
-        administratorButton.setFont(new Font("Arial", Font.BOLD, 12));
+        //administratorButton.setBackground(new Color(67, 134, 204));
+        //administratorButton.setForeground(Color.WHITE);
+        //administratorButton.setFont(new Font("Arial", Font.BOLD, 12));
 
         add(studentButton);
         add(profesorButton);
