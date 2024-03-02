@@ -76,7 +76,8 @@ public class HomeStudent extends JFrame {
         situatieScolaraButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adaugă logica pentru butonul "Situatie Scolara"
+                dispose();
+                new SituatieScolara(email).setVisible(true);
 
             }
         });
@@ -84,23 +85,24 @@ public class HomeStudent extends JFrame {
         vizualizareActivitatiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adaugă logica pentru butonul "Vizualizare Activitati"
+                dispose();
+                new ActivitatiCurs(email).setVisible(true);
             }
         });
 
         grupuriStudiuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adaugă logica pentru butonul "Grupuri de Studiu"
-
+                dispose();
+                new GrupuriStudiu(email).setVisible(true);
             }
         });
     }
 
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
-        button.setForeground(Color.WHITE);
-        button.setBackground(new Color(67, 134, 204));
+        //button.setForeground(Color.WHITE);
+        //button.setBackground(new Color(67, 134, 204));
         button.setFocusPainted(false);
         button.setFont(new Font("Arial", Font.BOLD, 12)); // Setează fontul dorit
 
@@ -117,7 +119,7 @@ public class HomeStudent extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                //new HomeStudent(email);
+                new HomeStudent("hulubanteodora@yahoo.com");
             }
         });
     }

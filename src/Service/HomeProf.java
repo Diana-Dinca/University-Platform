@@ -10,15 +10,16 @@ public class HomeProf extends JFrame {
     private JButton vizualizareDatePersonaleButton;
     private JButton programareActivitatiButton;
     private JButton catalogButton;
+    private JButton procentajeButton;
     private JButton vizualizareActivitatiButton;
 
-    public HomeProf() {
+    public HomeProf(String email) {
         setTitle("Home Profesor");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 250);
 
         initializeUI();
-        setupListeners();
+        setupListeners(email);
 
         setLocationRelativeTo(null);
         setVisible(true);
@@ -33,6 +34,7 @@ public class HomeProf extends JFrame {
         vizualizareDatePersonaleButton = createStyledButton("Vizualizare Date");
         programareActivitatiButton = createStyledButton("Programare Activitati");
         catalogButton = createStyledButton("Catalog");
+        procentajeButton= createStyledButton("Procentaje Curs");
         vizualizareActivitatiButton = createStyledButton("Vizualizare Activitati");
 
         layout.setAutoCreateGaps(true);
@@ -42,20 +44,23 @@ public class HomeProf extends JFrame {
                 .addComponent(deautentificareButton)
                 .addComponent(vizualizareDatePersonaleButton)
                 .addComponent(programareActivitatiButton)
+                .addComponent(vizualizareActivitatiButton)
                 .addComponent(catalogButton)
-                .addComponent(vizualizareActivitatiButton));
+                .addComponent(procentajeButton));
+
 
         layout.setVerticalGroup(layout.createSequentialGroup()
                 .addComponent(deautentificareButton)
                 .addComponent(vizualizareDatePersonaleButton)
                 .addComponent(programareActivitatiButton)
+                .addComponent(vizualizareActivitatiButton)
                 .addComponent(catalogButton)
-                .addComponent(vizualizareActivitatiButton));
+                .addComponent(procentajeButton));
 
         add(panel);
     }
 
-    private void setupListeners() {
+    private void setupListeners(String email) {
         deautentificareButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -67,46 +72,80 @@ public class HomeProf extends JFrame {
         vizualizareDatePersonaleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adaugă logica pentru butonul "Vizualizare Date Personale"
+                dispose();
+                new VizualizareDate(email).setVisible(true);
             }
         });
 
         programareActivitatiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adaugă logica pentru butonul "Programare Activitati"
+                dispose();
+                new AdaugareActivitatiProf(email).setVisible(true);
             }
         });
 
         catalogButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adaugă logica pentru butonul "Catalog"
+                dispose();
+                new Catalog(email).setVisible(true);
+            }
+        });
+
+        procentajeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Procentaje(email).setVisible(true);
             }
         });
 
         vizualizareActivitatiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Adaugă logica pentru butonul "Vizualizare Activitati"
+                dispose();
+                new ActivitatiProfesor(email).setVisible(true);
             }
         });
     }
 
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
-        button.setForeground(Color.WHITE);
-        button.setBackground(new Color(67, 134, 204));
-        button.setFocusPainted(false);
+        button.setFont(new Font("Arial", Font.BOLD, 12)); // Setează fontul dorit
+
         return button;
     }
-    
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new HomeProf();
+                new HomeProf("ivancosmina@yahoo.com");
             }
         });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

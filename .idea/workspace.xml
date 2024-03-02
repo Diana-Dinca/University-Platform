@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fba75413-35ff-45e3-bce6-570a2a7e5a36" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_221.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ActivitatiProfesor.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/ActivitatiProfesor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/AdaugareActivitatiProf.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/AdaugareActivitatiProf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Catalog.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Catalog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/CautareCurs.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/CautareCurs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/CautareUtilizator.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/CautareUtilizator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/HomeSuperAdmin.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/HomeSuperAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Procentaje.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/Procentaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_22.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_22.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proiectBD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proiectBD.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configuration/ConnectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration/ConnectConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/ActivitatiCurs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/ActivitatiCurs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/InrolariCurs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/InrolariCurs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/Procentaje.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UtilizatorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UtilizatorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/AutentifInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/AutentifInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/HomeAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HomeAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/HomeProf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HomeProf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/HomeStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/HomeStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/NewAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/NewAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/NewProf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/NewProf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/NewStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/NewStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/TipUtilizator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/TipUtilizator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/VizualizareDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/VizualizareDate.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2b2vSU7jVjnMCHQZsOWdQtrw2iC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ActivitatiCurs.executor": "Run",
+    "Application.ActivitatiProfesor.executor": "Run",
+    "Application.AutentifInterface.executor": "Run",
+    "Application.Catalog.executor": "Run",
+    "Application.CautareCurs.executor": "Run",
+    "Application.CautareUtilizator.executor": "Run",
+    "Application.HomeAdmin.executor": "Run",
+    "Application.HomeProf.executor": "Run",
+    "Application.HomeStudent.executor": "Run",
+    "Application.HomeSuperAdmin.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Procentaje.executor": "Run",
+    "Application.TipUtilizator.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/diana/Desktop/POO/PROIECT_FINAL_V2/proiectBD_V2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fba75413-35ff-45e3-bce6-570a2a7e5a36" name="Changes" comment="" />
+      <created>1705425987468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705425987468</updated>
+      <workItem from="1705425988573" duration="12128000" />
+      <workItem from="1705478149623" duration="27622000" />
+      <workItem from="1705527618463" duration="926000" />
+      <workItem from="1705562991593" duration="4289000" />
+      <workItem from="1705587157451" duration="68000" />
+      <workItem from="1705589778670" duration="22908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

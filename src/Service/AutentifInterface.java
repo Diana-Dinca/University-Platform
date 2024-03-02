@@ -34,14 +34,16 @@ public class AutentifInterface extends JFrame {
         parolaPasswordField = new JPasswordField();
         autentificareButton = new JButton("Autentificare");
         utilizatorNouButton = new JButton("Utilizator Nou");
+        autentificareButton.setFont(new Font("Arial", Font.BOLD, 12)); // Setează fontul dorit
+        utilizatorNouButton.setFont(new Font("Arial", Font.BOLD, 12)); // Setează fontul dorit
 
-        autentificareButton.setBackground(new Color(67, 134, 204));
-        autentificareButton.setForeground(Color.WHITE);
-        autentificareButton.setFont(new Font("Arial", Font.BOLD, 12));
+        //autentificareButton.setBackground(new Color(67, 134, 204));
+        //autentificareButton.setForeground(Color.WHITE);
+        //autentificareButton.setFont(new Font("Arial", Font.BOLD, 12));
 
-        utilizatorNouButton.setBackground(new Color(67, 134, 204));
-        utilizatorNouButton.setForeground(Color.WHITE);
-        utilizatorNouButton.setFont(new Font("Arial", Font.BOLD, 12));
+        //utilizatorNouButton.setBackground(new Color(67, 134, 204));
+        //utilizatorNouButton.setForeground(Color.WHITE);
+        //utilizatorNouButton.setFont(new Font("Arial", Font.BOLD, 12));
 
         panel.add(emailLabel);
         panel.add(emailTextField);
@@ -69,7 +71,15 @@ public class AutentifInterface extends JFrame {
                     JOptionPane.showMessageDialog(AutentifInterface.this, "Autentificare reusita!");
                     //instantiez cu constructorul din clasa homepage
                     dispose();
-                    new HomeStudent(email).setVisible(true);
+                    if(autentif.verificaTipUtilizator(email)== 0)
+                        new HomeStudent(email).setVisible(true);
+                    else if(autentif.verificaTipUtilizator(email)== 1)
+                        new HomeProf(email).setVisible(true);
+                    else if(autentif.verificaTipUtilizator(email)== 2)
+                        new HomeAdmin(email).setVisible(true);
+                    else if(autentif.verificaTipUtilizator(email)== 3)
+                        new HomeSuperAdmin(email).setVisible(true);
+
                 } else {
                     JOptionPane.showMessageDialog(AutentifInterface.this, "Autentificare esuata!");
                 }
@@ -104,3 +114,34 @@ public class AutentifInterface extends JFrame {
         });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

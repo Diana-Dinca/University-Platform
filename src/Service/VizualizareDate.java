@@ -15,6 +15,7 @@ public class VizualizareDate extends JFrame {
 
         JTextArea textArea = new JTextArea();
         textArea.setEditable(false);  // Face JTextArea nelaborabilă
+        textArea.setFont(new Font("Arial", Font.PLAIN, 16));
         JScrollPane scrollPane = new JScrollPane(textArea);
         add(scrollPane);
 
@@ -23,13 +24,21 @@ public class VizualizareDate extends JFrame {
 
         // Afișăm rezultatul în textArea
         textArea.setText(rezultat);
-
-        JButton backButton = createStyledButton("Înapoi");
+        JButton backButton = createStyledButton("Inapoi");
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new HomeStudent(email).setVisible(true);
+                UtilizatorRepository autentif = new UtilizatorRepository();
+                if(autentif.verificaTipUtilizator(email)== 0)
+                    new HomeStudent(email).setVisible(true);
+                else if(autentif.verificaTipUtilizator(email)== 1)
+                    new HomeProf(email).setVisible(true);
+                else if(autentif.verificaTipUtilizator(email)== 2)
+                    new HomeAdmin(email).setVisible(true);
+                else if(autentif.verificaTipUtilizator(email)== 3)
+                    new HomeSuperAdmin(email).setVisible(true);
+
             }
         });
 
@@ -42,9 +51,9 @@ public class VizualizareDate extends JFrame {
     }
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
-        button.setForeground(Color.WHITE);
-        button.setBackground(new Color(67, 134, 204));
-        button.setFocusPainted(false);
+        // button.setForeground(Color.WHITE);
+        // button.setBackground(new Color(67, 134, 204));
+        // button.setFocusPainted(false);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

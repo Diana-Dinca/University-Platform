@@ -22,6 +22,7 @@ public class NewProf extends JFrame {
     private JTextField nrMaxOreTextField;
     private JTextField departamentTextField;
     private JButton adaugaButton;
+    private JButton inapoiButton;
 
     public NewProf() {
         initializeUI();
@@ -38,7 +39,7 @@ public class NewProf extends JFrame {
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JPanel formPanel = new JPanel();
-        formPanel.setLayout(new GridLayout(13, 2, 10, 10));
+        formPanel.setLayout(new GridLayout(14, 2, 10, 10));
 
         emailTextField = new JTextField();
         passwordField = new JPasswordField();
@@ -53,6 +54,10 @@ public class NewProf extends JFrame {
         nrMaxOreTextField = new JTextField();
         departamentTextField = new JTextField();
         adaugaButton = new JButton("Adauga Profesor");
+        inapoiButton = new JButton("Înapoi");
+        //inapoiButton.setBackground(new Color(67, 134, 204));
+        //inapoiButton.setForeground(Color.WHITE);
+        //inapoiButton.setFont(new Font("Arial", Font.BOLD, 12));
 
         formPanel.add(new JLabel("Email:"));
         formPanel.add(emailTextField);
@@ -80,6 +85,8 @@ public class NewProf extends JFrame {
         formPanel.add(departamentTextField);
         formPanel.add(new JLabel());  // Celula goală pentru a ocupa spațiu
         formPanel.add(adaugaButton);
+        formPanel.add(new JLabel());  // Celula goală pentru a ocupa spațiu
+        formPanel.add(inapoiButton);
 
         mainPanel.add(formPanel, BorderLayout.CENTER);
         add(mainPanel);
@@ -93,6 +100,14 @@ public class NewProf extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 adaugaProfesor();
+            }
+        });
+
+        inapoiButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new AutentifInterface().setVisible(true);
             }
         });
     }
@@ -113,13 +128,17 @@ public class NewProf extends JFrame {
         String departament = departamentTextField.getText();
 
         // Apelați metoda din repository pentru adăugarea profesorului în baza de date
-        UtilizatorRepository.adaugareProfesor(email, parola, cnp, nume, prenume, adresa, nrTel, nrContract, iban, nrMinOre, nrMaxOre, departament);
+        int rez = UtilizatorRepository.adaugareProfesor(email, parola, cnp, nume, prenume, adresa, nrTel, nrContract, iban, nrMinOre, nrMaxOre, departament);
 
         // Afiseaza un mesaj de succes
-        JOptionPane.showMessageDialog(this, "Profesor adăugat cu succes!");
+        if(rez==-1)
+            JOptionPane.showMessageDialog(NewProf.this, "Profesorul exista deja!");
+        else
+            JOptionPane.showMessageDialog(NewProf.this, "Profesorul adăugat cu succes!");
 
         // Închide fereastra curentă
         dispose();
+        new HomeProf(email).setVisible(true);
     }
 
     public static void main(String[] args) {
