@@ -85,7 +85,11 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/diana/Desktop/POO/PROIECT_FINAL_V2/proiectBD_V2",
+=======
+    "last_opened_file_path": "C:/Users/diana/Desktop/POO/PROIECT/ProiectOOP",
+>>>>>>> 5f5a72c53e18a8fa154c7e2ab2cbc19df66c0e9e
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,6 +115,11 @@
       <workItem from="1705562991593" duration="4289000" />
       <workItem from="1705587157451" duration="68000" />
       <workItem from="1705589778670" duration="22908000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1705617067773" duration="33000" />
+      <workItem from="1705649987586" duration="1686000" />
+>>>>>>> 5f5a72c53e18a8fa154c7e2ab2cbc19df66c0e9e
     </task>
     <servers />
   </component>
