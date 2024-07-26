@@ -1,12 +1,15 @@
+### User roles
 #### The designed application provides an IT system for managing a study platform through a graphical interface. Its functionality covers the management of four types of users: students, teachers, administrators and super-administrators. They can perform different functions, having different ranks. 
-All the users share the ability to view their own personal data, but the admin type is the only one who can modify the data and delete a student or teacher user, while the super-admin has maximum privileges and can modify and delete and administrator users.
+All the users share the ability to view their own personal data, but the admin type is the only one who can modify the data and delete a student or teacher user, while the super-admin has maximum privileges.
 ####
-The student user has functionalities such as: enrolling or withdrawing from a course; view notes from a course; viewing, enrolling or canceling activities within a course, as well as viewing the activities to which he is enrolled; viewing, joining or opting out of a study group and activities organized by that group, as well as exchanging messages between members.
+The student user has functionalities such as: enrolling or withdrawing from a course; view his notes; viewing, enrolling or canceling activities within a course, as well as viewing the activities to which he is enrolled; viewing, joining or opting out of a study group and activities organized by that group, as well as exchanging messages between members.
 #### 
 The teacher-type user has functionalities such as: viewing activities, scheduling activities, setting grade percentages for the different activities of the course (laboratory, seminar, course), accessing the catalog where they can filter students by course and add grades to them.
 #### 
 The administrator type user has functionalities such as: searching for users by name, filtering all users by type, searching for a course and assigning teachers to it, viewing all students enrolled in a certain course.
-#### In the designed application I used 15 tables to retain the entire set of data required for an optimal operation of the database. The created model involves *6 ManytoMany* relationships, implemented by adding intermediate tables and all the functionalities were implemented using specific procedures, which I later called in Java, to be able to link the users of the application to the database.
+### Implementation
+#### 
+In the designed application I used 15 tables to retain the entire set of data required for an optimal operation of the database. The created model involves *6 ManytoMany* relationships, implemented by adding intermediate tables and all the functionalities were implemented using specific procedures, which I later called in Java, to be able to link the users of the application to the database.
 #### 
 To work as efficiently as possible, I structured the Java code into several packages:
 ###### •	*Configuration*- provides the connection between the database and the working platform in Java
